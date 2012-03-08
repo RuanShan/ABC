@@ -46,4 +46,8 @@ ABC::Application.configure do
 
   # Send deprecation notices to registered listeners
   config.active_support.deprecation = :notify
+
+  #Setup default url options. In production it must be the actual host of our application
+  config.action_mailer.default_url_options = { :host => 'www.abc.com' }
+
 end
