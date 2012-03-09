@@ -1,0 +1,23 @@
+<%= form_for(@shop) do |f| %>
+  <% if @shop.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@shop.errors.count, "error") %> prohibited this shop from being saved:</h2>
+
+      <ul>
+      <% @shop.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+    <%= f.label :name, '商店名称' %><%= f.text_field :name, :size => "40" %><br/>
+    <%= f.label :owner, '店主姓名' %><%= f.text_field :owner, :size => "20" %><br/>
+    <%= f.label :owner_id, '身份证号' %><%= f.text_field :owner_id, :size => "20" %><br/>
+    <%= f.label :address, '地址' %><%= f.select :district, [['西岗区', 1], ['中山区', 2], ['沙河口区', 3], ['甘井子区', 4]] %><%= f.text_field :address, :size => "100" %><br/>
+
+
+  <div class="actions">
+    <%= f.submit "创建商店"%>
+  </div>
+<% end %>
