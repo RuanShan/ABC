@@ -1,0 +1,26 @@
+# Sample localization file for English. Add more files in this directory for other locales.
+# See http://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
+
+zh-CN:
+  activerecord:
+    models:
+      category: 分类
+      shop: 商店
+      user: 用户
+    attributes:
+      category:
+        name: 分类名称
+        description: 分类描述
+        type: 分类类别
+        enabled: 启用分类
+      shop:
+        name: 商店名称
+        url: 商店网址
+        owner: 店主姓名
+        owner_id: 身份证号
+        province: 省
+        city: 市
+        district: 区
+        address: 地址
+      user:
+        login: 登录名称
