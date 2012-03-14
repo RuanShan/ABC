@@ -10,8 +10,7 @@ class DeviseCreateUsers < ActiveRecord::Migration
       # t.confirmable
       # t.lockable :lock_strategy => :failed_attempts, :unlock_strategy => :both
       # t.token_authenticatable
-      t.login #user's login name
-
+      t.string :login, :limit => 10*4, :null => false, :default => "" #user's login name
       t.timestamps
     end
 
