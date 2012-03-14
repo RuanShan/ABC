@@ -1,0 +1,12 @@
+# Sample localization file for English. Add more files in this directory for other locales.
+# See http://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
+
+zh-CN:
+  admin:
+    categories:
+      index:
+        listing_categories: 所有分类
+    shops:
+      form:
+        dalian_districts: "[['西岗区', 1], ['中山区', 2], ['沙河口区', 3], ['甘井子区', 4]]"
+

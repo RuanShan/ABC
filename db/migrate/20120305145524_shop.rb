@@ -16,16 +16,10 @@ class Shop < ActiveRecord::Migration
       t.timestamps
     end
 
-    create_table :shop_categories do |t|
-      t.string :name, :limit => 50*4,     :null => false, :default => ""
-      t.string :description, :limit => 100*4,  :default => ""
-      t.boolean :enabled, :default => false # shop category is not enabled when it is first created
-      t.timestamps
-    end
-
     create_table :categories do |t|
       t.string :name, :limit => 50*4,     :null => false, :default => ""
       t.string :description, :limit => 100*4,  :default => ""
+      t.string :type, :limit => 1,  :default => "" #p is product category, s is shop category
       t.boolean :enabled, :default => false # category is not enabled when it is first created
       t.timestamps
     end
@@ -36,7 +30,6 @@ class Shop < ActiveRecord::Migration
 
   def self.down
     drop_table :shops
-    drop_table :shop_categories
     drop_table :categories
   end
 end
